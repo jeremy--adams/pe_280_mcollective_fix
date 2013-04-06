@@ -11,12 +11,12 @@ class pe_280_mcollective_fix::params {
       $stomp_provider = 'rpm'
       case $::operatingsystemrelease {
         /^5/: {
-          $stomp_name   = 'pe-rubygem-stomp-1.2.3-1.1.9.pe.el5.noarch.rpm'
-          $stomp_source = "${source_base}/el/${stomp_name}"
+          $stomp_name   = 'pe-rubygem-stomp-1.2.3-1.1.9.pe.el5.noarch'
+          $stomp_source = "${source_base}/el/${stomp_name}.rpm"
         }
         /^6/: {
-          $stomp_name   = 'pe-rubygem-stomp-1.2.3-1.1.9.pe.el6.noarch.rpm'
-          $stomp_source = "${source_base}/el/${stomp_name}"
+          $stomp_name   = 'pe-rubygem-stomp-1.2.3-1.1.9.pe.el6.noarch'
+          $stomp_source = "${source_base}/el/${stomp_name}.rpm"
         }
         default: {
           $stomp_source = 'FAIL'
